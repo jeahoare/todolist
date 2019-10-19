@@ -1,4 +1,4 @@
-## Screens (3)
+## Screens
 
 Format grand écran - données
 
