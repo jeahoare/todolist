@@ -1,0 +1,41 @@
+/* Format pour ecran > 700px */
+.Form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-items: center;
+  margin: 0px 10px 20px 10px;
+}
+.Input {
+  width: 100%;
+  padding: 12px 20px;
+  font-family: inherit;
+  font-size: calc(10px + 1vmin);
+  color: #242424;
+  box-sizing: border-box;
+  outline: none;
+  margin-top: 20px;
+}
+::placeholder { /* Firefox, Chrome, Opera */ 
+  font-family: inherit;
+  color: #242424;
+  font-size: calc(10px + 1vmin);
+} 
+input:focus::placeholder{
+  color:transparent;
+}
+.Button {
+  color: #cd4436;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Changement pour format mobile <= 700px */
+@media screen and (max-width: 700px) {
+  .Input {
+    border-radius: 0px 12px 12px 0px;
+    border-left: 0px;
+  }
+}
+

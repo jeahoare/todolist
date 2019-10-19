@@ -1,0 +1,68 @@
+/* Apparence de la barre de tâche comprenant (CASE, MESSAGE, CROIX) */
+.Task {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-self: center;
+  width: 100%;
+  min-height: 40px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+/* Changement de couleur des composants de la tache sous la souris */
+.Task:hover > .Delete {
+  color: #cd4436;
+}
+.Task:hover > .Message {
+  color: #cd4436;
+}
+.Task:hover > .DelCross {
+  color: #cd4436;
+}
+/* Apparence du MESSAGE selon l'état de validation */
+/* 1er classe = Non validé, 2nd classe = validée*/
+input {
+  outline: none;
+  border: 1px;
+  cursor: auto;
+}
+.Message {
+  flex-grow: 1;
+  font-size: calc(10px + 2vmin);
+  margin-left: 10px;
+  color: #232323;
+  align-self: center;
+  text-align: justify;
+  overflow: auto;
+}
+.MsgCrossed {
+  flex-grow: 1;
+  font-size: calc(10px + 2vmin);
+  margin-left: 10px;
+  text-decoration: line-through;
+  color: #80808026;
+  align-self: center;
+  text-align: justify;
+  overflow: auto;
+}
+/* Apparence de la CROIX de suppression selon l'état de validation */
+/* 1er classe = Non validé, 2nd classe = validée*/
+.Delete {
+  align-self: center;
+  color: #80808026;
+  padding-right: 12px;
+  padding-left: 12px;
+  margin: 0px 8px;
+  cursor: pointer;
+}
+.Delete:hover {
+  color: #cd4436;
+}
+.DelCross {
+  color: #80808026;
+  align-self: center;
+  padding-right: 12px;
+  padding-left: 12px;
+  margin: 0px 8px;
+  cursor: pointer;
+}

@@ -1,0 +1,17 @@
+.Header {
+  color: #dcddd8;
+  background-color: #cd4436;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.Title {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+.Logo {
+  padding: 10px;
+  user-select: none;
+}
