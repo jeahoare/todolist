@@ -10,7 +10,7 @@ import './TaskInput.css';
 // - L'attribut error ligne 19 de l'input permet le soulignement en rouge
 function TaskInput({ handleChange, handleSubmit, newTask }) {
   return (
-    <div className="Form">
+    <form className="Form" onSubmit={handleSubmit}>
       <Input
         placeholder="Yeah, time to make your own quests"
         onChange={handleChange('newTask')}
@@ -18,10 +18,10 @@ function TaskInput({ handleChange, handleSubmit, newTask }) {
         className="Input"
         error
       />
-      <IconButton onClick={handleSubmit}>
+      <IconButton type="submit">
         <PlaylistAdd className="Button" />
       </IconButton>
-    </div>
+    </form>
   );
 }
 
