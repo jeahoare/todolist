@@ -2,11 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types'
 import Delete from '@material-ui/icons/Delete';
 import Checkbox from '@material-ui/core/Checkbox';
+import Input from '@material-ui/core/Input';
 import './tasksList.css';
+
 
 // Fonction permettant l'affichage des tâches une à une, possibilité de
 // validation et suppression. Leur état de validation définit leur 
-// apparence grisée ou non selon leur state.
+// apparence barée ou non selon leur state.
 
 function TasksList({ tasks, deleteTask, stateTask, editTask }) {
   const printTaskByState = ( bool ) => {
@@ -21,10 +23,12 @@ function TasksList({ tasks, deleteTask, stateTask, editTask }) {
                 'aria-label': 'checkbox with default color',
               }}
             />
-            <input 
+            <Input 
               className={state ? "Message" : "MsgCrossed"}
               value={task.message}
               onChange={editTask(index)}
+              multiline
+              disableUnderline
             />
             <div
               className={state ? "Delete" : "DelCross"}
