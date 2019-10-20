@@ -16,6 +16,8 @@ const TaskInput = ({ handleChange, handleSubmit, newTask }) =>
       value={newTask}
       className="Input"
       error
+      required
+      multiline
     />
     <IconButton type="submit">
       <PlaylistAdd className="Button" />
