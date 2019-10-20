@@ -29,15 +29,14 @@ class App extends Component {
         state: true,
       });
       this.setState({tasks: tasksTmp});
-      event.preventDefault();
     }
+    event.preventDefault();
   };
   // Méthode supprimant la tâche associée
   deleteTask = index => event => {
     let tasksTmp = this.state.tasks;
     tasksTmp.splice(index, 1);
     this.setState({tasks: tasksTmp});
-    event.preventDefault();
   }
   // Méthode qui permet de modifier le contenue
   // d'une tâche de la liste lorsqu'elle est cliquée
@@ -45,7 +44,6 @@ class App extends Component {
     let tasksTmp = this.state.tasks;
     tasksTmp[index].message = event.target.value;
     this.setState({tasks: tasksTmp});
-    event.preventDefault();  
   }
   // Méthode permettant de change l'état d'une tâche entre validée ou non
   // Son apparence change en fonction. 
@@ -53,7 +51,6 @@ class App extends Component {
     let tasksTmp = this.state.tasks
     tasksTmp[index].state = tasksTmp[index].state ? false : true;
     this.setState({tasks: tasksTmp});
-    event.preventDefault();
   }
   render () {
     const { task, tasks } = this.state;
