@@ -29,6 +29,7 @@ input:focus::placeholder{
   border: none;
   cursor: pointer;
   outline: none;
+  padding-left: 10px;
 }
 
 /* Changement pour format mobile <= 700px */
