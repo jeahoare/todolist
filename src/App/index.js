@@ -13,19 +13,16 @@ class App extends Component {
       tasks: [],
     }
   }
-  // Méthode ajoutant une tâche à la liste si elle n'est pas vide
   addTask = task => {
     let tasksTmp = [...this.state.tasks, task];
     this.setState({tasks: tasksTmp});
   };
-  // Méthode supprimant la tâche associée
   deleteTask = index => {
     let tasksTmp = this.state.tasks;
     tasksTmp.splice(index, 1);
     this.setState({tasks: tasksTmp});
   }
-  // Méthode permettant d'éditer le contenue d'une tâche
-  editTask = index => event => {
+  editTask = (index, event) => {
     let tasksTmp = this.state.tasks;
     tasksTmp[index].message = event.target.value;
     this.setState({tasks: tasksTmp});
