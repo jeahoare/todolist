@@ -18,21 +18,19 @@ function TasksList({ tasks, deleteTask, stateTask, editTask }) {
           (<div key={index} className="Task">
             <Checkbox
               checked={!state}
-              onClick={stateTask(index)}
-              inputProps={{
-                'aria-label': 'checkbox with default color',
-              }}
+              onClick={() => stateTask(index)}
+              inputProps={{'aria-label': 'checkbox with default color'}}
             />
             <Input 
               className={state ? "Message" : "MsgCrossed"}
               value={task.message}
-              onChange={editTask(index)}
+              onChange={() => editTask(index)}
               multiline
               disableUnderline
             />
             <div
               className={state ? "Delete" : "DelCross"}
-              onClick={deleteTask(index)}
+              onClick={() => deleteTask(index)}
             >
               <Delete />
             </div>
