@@ -3,14 +3,27 @@ import PropTypes from 'prop-types'
 import Delete from '@material-ui/icons/Delete';
 import Checkbox from '@material-ui/core/Checkbox';
 import Input from '@material-ui/core/Input';
+import { makeStyles } from '@material-ui/core/styles';
 import './tasksList.css';
 
+const useStyles = makeStyles({
+  root: {
+    color: '#80808026',
+    alignSelf: 'center',
+    textAlign: 'justify',
+    overflow: 'auto',
+    flexGrow: '1',
+    marginLeft: '10px',
+    textDecoration: 'line-through',
+  },
+});
 
 // Fonction permettant l'affichage des tâches une à une, possibilité de
 // validation et suppression. Leur état de validation définit leur 
 // apparence barée ou non selon leur state.
 
 function TasksList({ tasks, deleteTask, stateTask, editTask }) {
+  const classes = useStyles();
   const printTaskByState = ( bool ) => {
     return tasks.map((task, index) => {
       let state = task.state;
@@ -22,9 +35,9 @@ function TasksList({ tasks, deleteTask, stateTask, editTask }) {
               inputProps={{'aria-label': 'checkbox with default color'}}
             />
             <Input 
-              className={state ? "Message" : "MsgCrossed"}
+              className={state ? "Message" : classes.root}
               value={task.message}
-              onChange={() => editTask(index)}
+              onChange={(e) => editTask(index, e)}
               multiline
               disableUnderline
             />
