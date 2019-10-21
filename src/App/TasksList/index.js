@@ -6,6 +6,8 @@ import Input from '@material-ui/core/Input';
 import { makeStyles } from '@material-ui/core/styles';
 import './tasksList.css';
 
+/* Apparence du message si la tâche est validée  */
+/* Permet de modifier les composants material-ui */
 const useStyles = makeStyles({
   root: {
     color: '#80808026',
