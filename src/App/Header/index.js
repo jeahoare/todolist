@@ -2,7 +2,6 @@ import React from 'react';
 import List from '@material-ui/icons/ListAlt';
 import './Header.css';
 
-// Affiche le Header
 const Header = () =>
   <div className="Header">
       <div className="Title">
