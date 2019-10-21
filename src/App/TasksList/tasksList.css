@@ -35,16 +35,6 @@ input {
   text-align: justify;
   overflow: auto;
 }
-.MsgCrossed {
-  flex-grow: 1;
-  font-size: calc(10px + 2vmin);
-  margin-left: 10px;
-  text-decoration: line-through;
-  color: #80808026;
-  align-self: center;
-  text-align: justify;
-  overflow: auto;
-}
 /* Apparence de la CROIX de suppression selon l'état de validation */
 /* 1er classe = Non validé, 2nd classe = validée*/
 .Delete {
