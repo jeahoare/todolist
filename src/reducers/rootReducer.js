@@ -1,8 +1,6 @@
 const initState = {
   newTask: "",
-  tasks: [
-
-  ],
+  tasks: [],
 }
 
 const rootReducer = ( state = initState, action ) => {
