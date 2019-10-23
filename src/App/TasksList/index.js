@@ -3,24 +3,24 @@ import PropTypes from 'prop-types'
 import Delete from '@material-ui/icons/Delete';
 import Checkbox from '@material-ui/core/Checkbox';
 import Input from '@material-ui/core/Input';
-// import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import { connect } from 'react-redux';
 import { deleteTask, stateTask, editTask } from '../../actions/taskActions';
 import './tasksList.css';
 
 /* Apparence du message si la tâche est validée  */
 /* Permet de modifier les composants material-ui */
-// const useStyles = makeStyles({
-//   root: {
-//     color: '#80808026',
-//     alignSelf: 'center',
-//     textAlign: 'justify',
-//     overflow: 'auto',
-//     flexGrow: '1',
-//     marginLeft: '10px',
-//     textDecoration: 'line-through',
-//   },
-// });
+const useStyles = makeStyles({
+  root: {
+    color: '#80808026',
+    alignSelf: 'center',
+    textAlign: 'justify',
+    overflow: 'auto',
+    flexGrow: '1',
+    marginLeft: '10px',
+    textDecoration: 'line-through',
+  },
+});
 
 // Fonction permettant l'affichage des tâches une à une, possibilité de
 // validation et suppression. Leur état de validation définit leur 
@@ -70,7 +70,7 @@ class TasksList extends Component {
     })
   }
   render() {
-   // const classes = useStyles();
+   const classes = useStyles();
    if (this.props.tasks.length === 0)
      return <span>Let's achieve something !</span>;
     return (
